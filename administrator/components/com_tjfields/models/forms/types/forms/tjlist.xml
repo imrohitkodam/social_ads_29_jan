@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params" label="COM_TJFIELDS_FIELD_BASIC_LABEL">
+		<fieldset name="params" class="btn-group">
+			<field class="btn-group" name="multiple" type="radio" default="0"
+				label="COM_TJFIELDS_FORM_LBL_FIELD_TJLIST_MULTIPLE" description="COM_TJFIELDS_FORM_DESC_FIELD_TJLIST_MULTIPLE">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field class="btn-group" name="other" type="radio" default="0"
+				label="COM_TJFIELDS_FORM_LBL_FIELD_TJLIST_OTHER" description="COM_TJFIELDS_FORM_DESC_FIELD_TJLIST_OTHER">
+				<option value="1">JYES</option>
+				<option value="0">JNO</option>
+			</field>
+			<field name="default" type="text" label="COM_TJFIELDS_FORM_LBL_FIELD_DEFAULT" description="COM_TJFIELDS_FORM_DESC_FIELD_DEFAULT"/>
+		</fieldset>
+	</fields>
+</form>

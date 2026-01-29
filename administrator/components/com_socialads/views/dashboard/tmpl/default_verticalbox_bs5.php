@@ -1,0 +1,72 @@
+<?php
+/**
+ * @version    SVN:<SVN_ID>
+ * @package    SocialAds
+ * @author     Techjoomla <extensions@techjoomla.com>
+ * @copyright  Copyright (c) 2009-2015 TechJoomla. All rights reserved
+ * @license    GNU General Public License version 2, or later
+ */
+// no direct access
+defined('_JEXEC') or die;
+
+use Joomla\CMS\Uri\Uri;
+use Joomla\CMS\Language\Text;
+use Joomla\CMS\HTML\HTMLHelper;
+
+?>
+<?php if (!$this->downloadid): ?>
+	<div class="clearfix pull-right">
+		<div class="alert alert-warning">
+			<?php
+				echo JText::sprintf('COM_SA_LIVE_UPDATE_DOWNLOAD_ID_MSG', '<a href="https://techjoomla.com/my-account/add-on-download-ids" target="_blank">' . JText::_('COM_SA_LIVE_UPDATE_DOWNLOAD_ID_MSG2') . '</a>');
+			?>
+		</div>
+	</div>
+
+	<div class="clearfix"></div>
+<?php endif; ?>
+
+<div class="panel panel-default paddingTop5">
+	<div class="panel-heading">
+		<i class="fa fa-bullhorn"></i>
+		<strong><?php echo Text::_('COM_SOCIALADS'); ?></strong>
+	</div>
+
+	<div class="panel-body">
+		<blockquote class="blockquote-reverse"><?php echo Text::_('COM_SOCIALADS_ABOUT'); ?></blockquote>
+
+		<div class="row">
+			<div class="col-md-12">
+				<?php
+					echo HTMLHelper::_('uitab.startTabSet', 'myTab', ['active' => 'links', 'recall' => true, 'breakpoint' => 768]);
+					echo HTMLHelper::_('uitab.addTab', 'myTab', 'links', Text::_('COM_SA_LINKS'));
+					echo $this->loadTemplate('links');
+					echo HTMLHelper::_('uitab.endTab');
+					echo HTMLHelper::_('uitab.addTab', 'myTab', 'tj-dashboard-news', Text::_('COM_SOCIALADS_TABS_NEWS'));
+
+					echo HTMLHelper::_('uitab.endTab');
+					echo HTMLHelper::_('uitab.addTab', 'myTab', 'about', Text::_('COM_SOCIALADS_TABS_ABOUT'));
+					echo $this->loadTemplate('about');
+					echo HTMLHelper::_('uitab.endTab');
+				?>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12">
+				<div class="center">
+					<?php
+					$logo_path = '<img src="' . Uri::root(true) . '/media/com_sa/images/techjoomla.png" alt="Techjoomla"/>';
+					?>
+					<a href='http://techjoomla.com/?utm_source=clientinstallation&utm_medium=dashboard&utm_term=socialads&utm_content=textlink&utm_campaign=socialads_ci' target='_blank'>
+						<?php echo $logo_path; ?>
+					</a>
+				</div>
+			</div>
+			<div class="center">
+				<p><?php echo Text::_('COM_SA_COPYRIGHT'); ?></p>
+			</div>
+		</div>
+
+	</div>
+</div>

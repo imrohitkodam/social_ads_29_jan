@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="component" method="upgrade">
+	<name>com_tjprivacy</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2017 - 2021 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>12th Jul 2021</creationDate>
+	<version>1.0.2</version>
+	<description><![CDATA[TJPrivacy - User Privacy Terms and Coditions]]></description>
+
+	<!-- Site Main File Copy Section -->
+	<files folder="site">
+		<folder>models</folder>
+		<folder>controllers</folder>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>tjprivacy.php</filename>
+	</files>
+	<languages folder="languages/site">
+		<language tag="en-GB">en-GB/en-GB.com_tjprivacy.ini</language>
+	</languages>
+	<!-- SQL query files to execute on installation -->
+	<install>
+		<sql>
+			<file driver="mysql" charset="utf8">sqlfiles/install.sql</file>
+		</sql>
+	</install>
+	<administration>
+		<files folder="admin">
+			<folder>models</folder>
+			<folder>controllers</folder>
+			<folder>sqlfiles</folder>
+			<folder>tables</folder>
+			<filename>tjprivacy.php</filename>
+			<filename>config.xml</filename>
+			<filename>access.xml</filename>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+		</files>
+		<languages folder="languages/admin">
+			<language tag="en-GB">en-GB/en-GB.com_tjprivacy.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_tjprivacy.sys.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_tjprivacy.menu.ini</language>
+		</languages>
+		<update>
+			<schemas>
+				<schemapath type="mysql">sqlfiles/updates/mysql</schemapath>
+			</schemas>
+		</update>
+	</administration>
+	<scriptfile>script.tjprivacy.php</scriptfile>
+</extension>

@@ -1,0 +1,2 @@
+ALTER TABLE `#__ad_data` add column `pay_initial_fee` TINYINT(2)  NOT NULL DEFAULT 0 COMMENT 'Need to pay initial payment for Ad placement' AFTER `impressions`;
+ALTER TABLE `#__ad_data` add column `pay_initial_fee_amout` INT(11) NOT NULL DEFAULT 0 COMMENT 'Initial fee for placing the Ad' AFTER `pay_initial_fee`;

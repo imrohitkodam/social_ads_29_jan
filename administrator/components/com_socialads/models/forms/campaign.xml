@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+		<field name="created_by" type="user" label="COM_SOCIALADS_FORM_LBL_CAMPAIGN_USERNAME" class="required" description="COM_SOCIALADS_FORM_DESC_CAMPAIGN_USERNAME" required="required" filter="INTEGER"/>
+		<field name="id" type="text" default="0" label="COM_SOCIALADS_FORM_LBL_CAMPAIGN_ID" readonly="true" class="readonly" description="JGLOBAL_FIELD_ID_DESC" filter="INTEGER"/>
+		<field name="user_id" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_CAMPAIGN_USER_ID" description="COM_SOCIALADS_FORM_DESC_CAMPAIGN_USER_ID" filter="INTEGER" />
+		<field name="campaign" type="text" size="40" class="inputbox required" label="COM_SOCIALADS_FORM_LBL_CAMPAIGN_CAMPAIGN" description="COM_SOCIALADS_FORM_DESC_CAMPAIGN_CAMPAIGN" filter="STRING" required="true" />
+		<field name="daily_budget" type="text" size="40" class="inputbox required alphaDecimalCheck" label="COM_SOCIALADS_FORM_LBL_CAMPAIGN_DAILY_BUDGET" description="COM_SOCIALADS_FORM_DESC_CAMPAIGN_DAILY_BUDGET" filter="STRING" required="true" />
+		<field name="camp_published" type="text" size="40" class="inputbox" label="COM_SOCIALADS_FORM_LBL_CAMPAIGN_CAMP_PUBLISHED" description="COM_SOCIALADS_FORM_DESC_CAMPAIGN_CAMP_PUBLISHED" filter="" />
+		<field name="state" type="radio" layout="joomla.form.field.radio.switcher" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="btn-group inputbox" size="1" default="1">
+			<option value="0">JUNPUBLISHED</option>
+			<option value="1">JPUBLISHED</option>
+		</field>
+		<field name="checked_out" type="hidden" filter="unset" />
+		<field name="checked_out_time" type="hidden" filter="unset" />
+		<field name="start_date" type="calendar" class="inputbox ms-2" label="COM_SOCIALADS_FORM_LBL_CAMPAIGN_START_DATE" description="COM_SOCIALADS_FORM_LBL_CAMPAIGN_START_DATE_DESC" format="%Y-%m-%d" filter="USER_UTC" hint = "YYYY-MM-DD"/>
+		<field name="end_date" type="calendar" class="inputbox ms-2" label="COM_SOCIALADS_FORM_LBL_CAMPAIGN_END_DATE" description="COM_SOCIALADS_FORM_LBL_CAMPAIGN_END_DATE_DESC" format="%Y-%m-%d" filter="USER_UTC" hint = "YYYY-MM-DD"/>
+	</fieldset>
+</form>

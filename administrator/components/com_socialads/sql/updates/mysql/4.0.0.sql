@@ -1,0 +1,160 @@
+ALTER TABLE `#__ad_archive_stats` CHANGE `date` `date` DATETIME DEFAULT NULL COMMENT 'Record date';
+ALTER TABLE `#__ad_archive_stats` CHANGE `ad_id` `ad_id` int(11) NOT NULL DEFAULT 0 COMMENT 'FK to #__ad_data';
+ALTER TABLE `#__ad_archive_stats` CHANGE `impression` `impression` int(11) NOT NULL DEFAULT 0 COMMENT 'Count of impressions from #__ad_stats selected days';
+ALTER TABLE `#__ad_archive_stats` CHANGE `click` `click` int(11) NOT NULL DEFAULT 0 COMMENT 'Count of clicks from #__ad_stats selected days';
+
+ALTER TABLE `#__ad_campaign` CHANGE `checked_out_time` `checked_out_time` DATETIME DEFAULT NULL;
+ALTER TABLE `#__ad_campaign` CHANGE `ordering` `ordering` int(11) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_campaign` CHANGE `checked_out` `checked_out` int(11) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_campaign` CHANGE `created_by` `created_by` int(11) NOT NULL DEFAULT 0 COMMENT 'Name of campaign';
+ALTER TABLE `#__ad_campaign` CHANGE `daily_budget` `daily_budget` int(11) NOT NULL DEFAULT 0 COMMENT 'Daily budget assigned for campaign';
+ALTER TABLE `#__ad_campaign` CHANGE `state` `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_campaign` CHANGE `campaign` `campaign` VARCHAR(255)  NOT NULL DEFAULT '' COMMENT 'Name of campaign';
+
+ALTER TABLE `#__ad_coupon` CHANGE `checked_out_time` `checked_out_time` DATETIME DEFAULT NULL;
+ALTER TABLE `#__ad_coupon` CHANGE `from_date` `from_date` DATETIME DEFAULT NULL COMMENT 'Coupon valid date';
+ALTER TABLE `#__ad_coupon` CHANGE `exp_date` `exp_date` DATETIME DEFAULT NULL COMMENT 'Coupon expires on';
+ALTER TABLE `#__ad_coupon` CHANGE `ordering` `ordering` int(11) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_coupon` CHANGE `checked_out` `checked_out` int(11) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_coupon` CHANGE `created_by` `created_by` int(11) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_coupon` CHANGE `value` `value` int(11) NOT NULL DEFAULT 0 COMMENT 'Amount given for coupon';
+ALTER TABLE `#__ad_coupon` CHANGE `max_use` `max_use` int(11) NOT NULL DEFAULT 0 COMMENT 'Max number of coupon usage';
+ALTER TABLE `#__ad_coupon` CHANGE `max_per_user` `max_per_user` int(11) NOT NULL DEFAULT 0 COMMENT 'Max number of time one user can use single coupon';
+ALTER TABLE `#__ad_coupon` CHANGE `state` `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_coupon` CHANGE `val_type` `val_type` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_coupon` CHANGE `description` `description` TEXT DEFAULT NULL COMMENT 'Coupon description';
+ALTER TABLE `#__ad_coupon` CHANGE `params` `params` TEXT DEFAULT NULL COMMENT 'For extra details';
+ALTER TABLE `#__ad_coupon` CHANGE `name` `name` VARCHAR(100)  NOT NULL DEFAULT '' COMMENT 'Coupon name';
+ALTER TABLE `#__ad_coupon` CHANGE `code` `code` VARCHAR(100)  NOT NULL DEFAULT '' COMMENT 'Unique code for coupon';
+
+ALTER TABLE `#__ad_data` CHANGE `ad_startdate` `ad_startdate` DATE DEFAULT NULL;
+ALTER TABLE `#__ad_data` CHANGE `ad_enddate` `ad_enddate` DATE DEFAULT NULL;
+ALTER TABLE `#__ad_data` CHANGE `checked_out_time` `checked_out_time` DATETIME DEFAULT NULL;
+ALTER TABLE `#__ad_data` CHANGE `ad_created_date` `ad_created_date` DATETIME DEFAULT NULL COMMENT 'Ad creation date.';
+ALTER TABLE `#__ad_data` CHANGE `ad_modified_date` `ad_modified_date` DATETIME DEFAULT NULL COMMENT 'Ad modification date.';
+ALTER TABLE `#__ad_data` CHANGE `ordering` `ordering` int(11) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_data` CHANGE `checked_out` `checked_out` int(11) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_data` CHANGE `created_by` `created_by` int(11) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_data` CHANGE `camp_id` `camp_id` int(11) NOT NULL DEFAULT 0 COMMENT 'If Ad wallet mode then campaign id from a wallet';
+ALTER TABLE `#__ad_data` CHANGE `ad_credits` `ad_credits` int(10) NOT NULL DEFAULT 0 COMMENT 'Number of credits avilable for a ad.';
+ALTER TABLE `#__ad_data` CHANGE `ad_credits_balance` `ad_credits_balance` int(10) NOT NULL DEFAULT 0 COMMENT 'Number of credits remaining for a ad';
+ALTER TABLE `#__ad_data` CHANGE `state` `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_data` CHANGE `ad_noexpiry` `ad_noexpiry` TINYINT(2) NOT NULL DEFAULT 0 COMMENT 'Unlimited ads';
+ALTER TABLE `#__ad_data` CHANGE `ad_payment_type` `ad_payment_type` TINYINT(2) NOT NULL DEFAULT 0 COMMENT 'Payment type selected  for ad';
+ALTER TABLE `#__ad_data` CHANGE `ad_approved` `ad_approved` TINYINT(4) NOT NULL DEFAULT 0 COMMENT 'Payment of ad is done or not';
+ALTER TABLE `#__ad_data` CHANGE `ad_alternative` `ad_alternative` TINYINT(4) NOT NULL DEFAULT 0 COMMENT 'If no ad is matching. show alternative ad';
+ALTER TABLE `#__ad_data` CHANGE `ad_guest` `ad_guest` TINYINT(4) NOT NULL DEFAULT 0 COMMENT 'Show ad to a guest user';
+ALTER TABLE `#__ad_data` CHANGE `ad_affiliate` `ad_affiliate` TINYINT(4) NOT NULL DEFAULT 0 COMMENT 'Ad created from google adsence';
+ALTER TABLE `#__ad_data` CHANGE `ad_zone` `ad_zone` INT(11) NOT NULL DEFAULT 0 COMMENT 'Ad created in this zone';
+ALTER TABLE `#__ad_data` CHANGE `params` `params` TEXT DEFAULT NULL COMMENT 'To save additional information against ad';
+ALTER TABLE `#__ad_data` CHANGE `bid_value` `bid_value` DOUBLE(11,2) NOT NULL DEFAULT 0 COMMENT 'Bid value for charging the ad';
+ALTER TABLE `#__ad_data` CHANGE `clicks` `clicks` float NOT NULL DEFAULT 0 COMMENT 'for number of clicks of perticular ad';
+ALTER TABLE `#__ad_data` CHANGE `impressions` `impressions` float NOT NULL DEFAULT 0 COMMENT 'For number of impressions of perticular ad';
+ALTER TABLE `#__ad_data` CHANGE `ad_url1` `ad_url1` MEDIUMTEXT DEFAULT NULL COMMENT 'User want to use http or https for a ad link';
+ALTER TABLE `#__ad_data` CHANGE `ad_url2` `ad_url2` MEDIUMTEXT DEFAULT NULL COMMENT 'After clicking on ad on which page advertiser wants to link';
+ALTER TABLE `#__ad_data` CHANGE `ad_title` `ad_title` VARCHAR(100)  NOT NULL DEFAULT '' COMMENT 'Title of a ad';
+ALTER TABLE `#__ad_data` CHANGE `ad_body` `ad_body` MEDIUMTEXT DEFAULT NULL COMMENT 'Content of a ad';
+ALTER TABLE `#__ad_data` CHANGE `ad_image` `ad_image` VARCHAR(200)  NOT NULL DEFAULT '' COMMENT 'Image for a ad';
+
+ALTER TABLE `#__ad_orders` CHANGE `cdate` `cdate` DATETIME DEFAULT NULL COMMENT 'Order creation date';
+ALTER TABLE `#__ad_orders` CHANGE `payment_info_id` `payment_info_id` int(11) NOT NULL DEFAULT 0 COMMENT 'Payment id';
+ALTER TABLE `#__ad_orders` CHANGE `amount` `amount` float NOT NULL DEFAULT 0 COMMENT 'Amount of a payment';
+ALTER TABLE `#__ad_orders` CHANGE `original_amount` `original_amount` float NOT NULL DEFAULT 0 COMMENT 'Amount needs to paid by a user';
+ALTER TABLE `#__ad_orders` CHANGE `tax` `tax` float(10,2) NOT NULL DEFAULT 0 COMMENT 'Tax if applied';
+
+ALTER TABLE `#__ad_payment_info` CHANGE `cdate` `cdate` DATETIME DEFAULT NULL COMMENT 'Payment date';
+ALTER TABLE `#__ad_payment_info` CHANGE `order_id` `order_id` int(11) NOT NULL DEFAULT 0 COMMENT 'FK to #__ad_orders';
+ALTER TABLE `#__ad_payment_info` CHANGE `ad_id` `ad_id` int(11) NOT NULL DEFAULT 0 COMMENT 'FK to #__ad_data';
+ALTER TABLE `#__ad_payment_info` CHANGE `recurring_count` `recurring_count` int(11) NOT NULL DEFAULT 0 COMMENT 'How many times payment will br done';
+ALTER TABLE `#__ad_payment_info` CHANGE `ad_credits_qty` `ad_credits_qty` int(11) NOT NULL DEFAULT 0 COMMENT 'COunt of ad credits';
+ALTER TABLE `#__ad_payment_info` CHANGE `is_recurring` `is_recurring` TINYINT(1) NOT NULL DEFAULT 0 COMMENT 'Recurring payment';
+ALTER TABLE `#__ad_payment_info` CHANGE `comment` `comment` TEXT DEFAULT NULL COMMENT 'Comment added for ad payment';
+
+ALTER TABLE `#__ad_zone` CHANGE `checked_out_time` `checked_out_time` DATETIME DEFAULT NULL;
+ALTER TABLE `#__ad_zone` CHANGE `ordering` `ordering` int(11) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_zone` CHANGE `checked_out` `checked_out` int(11) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_zone` CHANGE `orientation` `orientation` TINYINT(2) NOT NULL DEFAULT 0 COMMENT 'Orientation for a specific zone Horizontal or Vertical';
+ALTER TABLE `#__ad_zone` CHANGE `max_title` `max_title` int(11) NOT NULL DEFAULT 0 COMMENT 'Maximum letters in ad title';
+ALTER TABLE `#__ad_zone` CHANGE `max_des` `max_des` int(11) NOT NULL DEFAULT 0 COMMENT 'Maximum letter in description of ad';
+ALTER TABLE `#__ad_zone` CHANGE `img_width` `img_width` int(11) NOT NULL DEFAULT 0 COMMENT 'Width of ad image';
+ALTER TABLE `#__ad_zone` CHANGE `img_height` `img_height` int(11) NOT NULL DEFAULT 0 COMMENT 'Height of ad image';
+ALTER TABLE `#__ad_zone` CHANGE `num_ads` `num_ads` int(11) NOT NULL DEFAULT 0 COMMENT 'Number of ads in zone';
+ALTER TABLE `#__ad_zone` CHANGE `state` `state` TINYINT(1) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_zone` CHANGE `per_click` `per_click` float NOT NULL DEFAULT 0 COMMENT 'Rate for per click';
+ALTER TABLE `#__ad_zone` CHANGE `per_imp` `per_imp` float NOT NULL DEFAULT 0 COMMENT 'Rate for per impression';
+ALTER TABLE `#__ad_zone` CHANGE `per_day` `per_day` float NOT NULL DEFAULT 0 COMMENT 'Rate for per day';
+ALTER TABLE `#__ad_zone` CHANGE `zone_name` `zone_name` VARCHAR(100)  NOT NULL DEFAULT '';
+ALTER TABLE `#__ad_zone` CHANGE `ad_type` `ad_type` VARCHAR(100)  NOT NULL DEFAULT '' COMMENT 'Type of ad text media or text and media and if zone supports affliate ad';
+ALTER TABLE `#__ad_zone` CHANGE `layout` `layout` VARCHAR(250)  NOT NULL DEFAULT '' COMMENT 'Layout selected for ad';
+
+ALTER TABLE `#__ad_wallet_transc` CHANGE `user_id` `user_id` int(11) NOT NULL DEFAULT 0 COMMENT 'userid who added a money in wallet';
+ALTER TABLE `#__ad_wallet_transc` CHANGE `time` `time` DOUBLE(15,2) NOT NULL DEFAULT 0 COMMENT 'Time at which transaction made';
+ALTER TABLE `#__ad_wallet_transc` CHANGE `spent` `spent` DECIMAL(16,5) NOT NULL DEFAULT 0 COMMENT 'Amount debited from users wallet';
+ALTER TABLE `#__ad_wallet_transc` CHANGE `earn` `earn` DECIMAL(16,5) NOT NULL DEFAULT 0 COMMENT 'Amount credited to users wallet';
+ALTER TABLE `#__ad_wallet_transc` CHANGE `balance` `balance` DECIMAL(16,5) NOT NULL DEFAULT 0 COMMENT 'Remaining balance in users wallet';
+ALTER TABLE `#__ad_wallet_transc` CHANGE `type` `type` VARCHAR(255)  NOT NULL DEFAULT '' COMMENT 'Type of transaction O is transaction for adding money in a wallet, migrate to wallet mode to pay per ad mode and vice versa and C is click and impression deduction from wallet';
+
+ALTER TABLE `#__ad_contextual_target` CHANGE `ad_id` `ad_id` int(11) NOT NULL DEFAULT 0 COMMENT 'FK to #__ad_data';
+ALTER TABLE `#__ad_contextual_target` CHANGE `keywords` `keywords` TEXT DEFAULT NULL COMMENT 'Meta keywords for contextual targeting';
+
+ALTER TABLE `#__ad_contextual_terms` CHANGE `indexdate` `indexdate` DATE DEFAULT NULL;
+ALTER TABLE `#__ad_contextual_terms` CHANGE `link_id` `link_id` int(10) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_contextual_terms` CHANGE `term_id` `term_id` int(10) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_contextual_terms` CHANGE `weight` `weight` FLOAT NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_contextual_terms` CHANGE `term` `term` VARCHAR(75)  NOT NULL DEFAULT '';
+
+ALTER TABLE `#__ad_fields_mapping` CHANGE `mapping_id` `mapping_id` int(11) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_fields_mapping` CHANGE `mapping_fieldid` `mapping_fieldid` int(11) NOT NULL DEFAULT 0 COMMENT 'Mapping field id from social sites';
+ALTER TABLE `#__ad_fields_mapping` CHANGE `mapping_category` `mapping_category` int(11) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_fields_mapping` CHANGE `mapping_publish` `mapping_publish` TINYINT(4) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_fields_mapping` CHANGE `mapping_check` `mapping_check` TINYINT(4) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_fields_mapping` CHANGE `mapping_match` `mapping_match` TINYINT(4) NOT NULL DEFAULT 0;
+ALTER TABLE `#__ad_fields_mapping` CHANGE `mapping_options` `mapping_options` TEXT DEFAULT NULL;
+ALTER TABLE `#__ad_fields_mapping` CHANGE `mapping_fieldtype` `mapping_fieldtype` VARCHAR(50)  NOT NULL DEFAULT '' COMMENT 'Field type like date text radio button';
+ALTER TABLE `#__ad_fields_mapping` CHANGE `mapping_label` `mapping_label` VARCHAR(100)  NOT NULL DEFAULT '' COMMENT 'Label for a field';
+ALTER TABLE `#__ad_fields_mapping` CHANGE `mapping_fieldname` `mapping_fieldname` VARCHAR(200)  NOT NULL DEFAULT '' COMMENT 'Name of a mapping field';
+
+ALTER TABLE `#__ad_geo_target` CHANGE `ad_id` `ad_id` int(11) NOT NULL DEFAULT 0 COMMENT 'FK to #__ad_data';
+ALTER TABLE `#__ad_geo_target` CHANGE `country` `country` TEXT DEFAULT NULL COMMENT 'Country selected for a geo targeting';
+ALTER TABLE `#__ad_geo_target` CHANGE `region` `region` TEXT DEFAULT NULL COMMENT 'Region selected for a geo targeting';
+ALTER TABLE `#__ad_geo_target` CHANGE `city` `city` TEXT DEFAULT NULL COMMENT 'City selected for a geo targeting';
+
+ALTER TABLE `#__ad_ignore` CHANGE `adid` `adid` int(11) NOT NULL DEFAULT 0 COMMENT 'FK to #__ad_data';
+ALTER TABLE `#__ad_ignore` CHANGE `userid` `userid` int(11) NOT NULL DEFAULT 0 COMMENT 'User who ignore a ad';
+ALTER TABLE `#__ad_ignore` CHANGE `ad_feedback` `ad_feedback` TEXT DEFAULT NULL COMMENT 'User seleced feedback option to ignore a ad';
+ALTER TABLE `#__ad_ignore` CHANGE `idate` `idate` TIMESTAMP NULL COMMENT 'Date on which ad is ignored';
+
+ALTER TABLE `#__ad_stats` CHANGE `ad_id` `ad_id` int(11) NOT NULL DEFAULT 0 COMMENT 'FK to #__ad_data';
+ALTER TABLE `#__ad_stats` CHANGE `user_id` `user_id` int(11) NOT NULL DEFAULT 0 COMMENT 'FK to #__ad_users';
+ALTER TABLE `#__ad_stats` CHANGE `display_type` `display_type` TINYINT(4) NOT NULL DEFAULT 0 COMMENT 'Impression - 0 or Click - 1';
+ALTER TABLE `#__ad_stats` CHANGE `spent` `spent` DECIMAL(11,2)  NOT NULL DEFAULT 0 COMMENT 'Advertisee spent how much time on ad';
+ALTER TABLE `#__ad_stats` CHANGE `ip_address` `ip_address` VARCHAR(100)  NOT NULL DEFAULT '' COMMENT 'IP address of a machine from where click or impression is done';
+ALTER TABLE `#__ad_stats` CHANGE `referer` `referer` VARCHAR(150)  NOT NULL DEFAULT '' COMMENT 'Site name where ad is displayed';
+ALTER TABLE `#__ad_stats` CHANGE `time` `time` TIMESTAMP NULL COMMENT 'Time on which click or impression is done';
+
+ALTER TABLE `#__ad_orders` CHANGE `extras` `extras` TEXT DEFAULT NULL COMMENT 'Fileds like url from which payment is did, order id, payment status, payment value etc';
+ALTER TABLE `#__ad_orders` CHANGE `tax_details` `tax_details` TEXT DEFAULT NULL COMMENT 'Infromation about a tax';
+ALTER TABLE `#__ad_orders` CHANGE `transaction_id` `transaction_id` varchar(100) NOT NULL DEFAULT '' COMMENT 'Payment transaction id';
+ALTER TABLE `#__ad_orders` CHANGE `comment` `comment` varchar(255) NOT NULL DEFAULT '' COMMENT 'Comment added by user while doing payment';
+ALTER TABLE `#__ad_orders` CHANGE `prefix_oid` `prefix_oid` VARCHAR(23) NOT NULL DEFAULT '';
+ALTER TABLE `#__ad_orders` CHANGE `payee_id` `payee_id` varchar(100) NOT NULL DEFAULT '' COMMENT 'User who did a payment';
+ALTER TABLE `#__ad_orders` CHANGE `status` `status` varchar(100) NOT NULL DEFAULT '' COMMENT 'Payment status like confirmed pending, etc';
+ALTER TABLE `#__ad_orders` CHANGE `processor` `processor` varchar(100) NOT NULL DEFAULT '' COMMENT 'Payment gateway';
+ALTER TABLE `#__ad_orders` CHANGE `ip_address` `ip_address` varchar(100) NOT NULL DEFAULT '' COMMENT 'Ip address from which payment is did';
+ALTER TABLE `#__ad_orders` CHANGE `coupon` `coupon` varchar(100) NOT NULL DEFAULT '' COMMENT 'Coupon Id';
+
+ALTER TABLE `#__ad_users` CHANGE `orderid` `orderid` int(11) NOT NULL DEFAULT 0 COMMENT 'FK to #__ad_orders';
+ALTER TABLE `#__ad_users` CHANGE `user_id` `user_id` int(11) NOT NULL DEFAULT 0 COMMENT 'User id in a joomla users table';
+ALTER TABLE `#__ad_users` CHANGE `ad_id` `ad_id` int(11) NOT NULL DEFAULT 0 COMMENT 'ad table foreign key';
+ALTER TABLE `#__ad_users` CHANGE `tax_exempt` `tax_exempt` TINYINT(4) NOT NULL DEFAULT 0 ;
+ALTER TABLE `#__ad_users` CHANGE `approved` `approved` TINYINT(1) NOT NULL DEFAULT 0 COMMENT 'Users state';
+ALTER TABLE `#__ad_users` CHANGE `vat_number` `vat_number` VARCHAR(250)  NOT NULL DEFAULT '' COMMENT 'vat number of user';
+ALTER TABLE `#__ad_users` CHANGE `user_email` `user_email` VARCHAR(255)  NOT NULL DEFAULT '' COMMENT 'Email ID of user';
+ALTER TABLE `#__ad_users` CHANGE `firstname` `firstname` VARCHAR(250)  NOT NULL DEFAULT '' COMMENT 'First name of user';
+ALTER TABLE `#__ad_users` CHANGE `lastname` `lastname` VARCHAR(250)  NOT NULL DEFAULT '' COMMENT 'Last name of user';
+ALTER TABLE `#__ad_users` CHANGE `country_code` `country_code` VARCHAR(51)  NOT NULL DEFAULT '' COMMENT 'Country code of user';
+ALTER TABLE `#__ad_users` CHANGE `address` `address` VARCHAR(255)  NOT NULL DEFAULT '' COMMENT 'Address of user';
+ALTER TABLE `#__ad_users` CHANGE `city` `city` VARCHAR(50)  NOT NULL DEFAULT '' COMMENT 'City of user';
+ALTER TABLE `#__ad_users` CHANGE `state_code` `state_code` VARCHAR(50)  NOT NULL DEFAULT '' COMMENT 'State code of user';
+ALTER TABLE `#__ad_users` CHANGE `zipcode` `zipcode` VARCHAR(255)  NOT NULL DEFAULT '' COMMENT 'Zip code of user';
+ALTER TABLE `#__ad_users` CHANGE `phone` `phone` VARCHAR(50)  NOT NULL DEFAULT '' COMMENT 'Phone number of user';

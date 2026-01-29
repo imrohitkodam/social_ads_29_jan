@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params" label="COM_TJFIELDS_FIELD_BASIC_LABEL">
+		<fieldset name="params">
+			<field name="multiple" type="radio" label="COM_TJFIELDS_FORM_LBL_FIELD_RELATED_MULTIPLE" default="0" class="btn-group" description="COM_TJFIELDS_FORM_DESC_FIELD_RELATED_MULTIPLE">
+				<option value="1">COM_TJFIELDS_YES</option>
+				<option value="0">COM_TJFIELDS_NO</option>
+			</field>
+			<field name="showAddNewRecordLink" type="radio" label="COM_TJFIELDS_FORM_LBL_FIELD_RELATED_ADD_RECORD_LINK" default="0" class="btn-group" description="COM_TJFIELDS_FORM_DESC_FIELD_RELATED_ADD_RECORD_LINK">
+				<option value="1">COM_TJFIELDS_YES</option>
+				<option value="0">COM_TJFIELDS_NO</option>
+			</field>
+			<field name="showParentRecordsOnly" type="radio" label="COM_TJFIELDS_FORM_LBL_FIELD_RELATED_SHOW_PARENT_RECORDS_ONLY" default="0" class="btn-group" description="COM_TJFIELDS_FORM_DESC_FIELD_RELATED_SHOW_PARENT_RECORDS_ONLY">
+				<option value="1">COM_TJFIELDS_YES</option>
+				<option value="0">COM_TJFIELDS_NO</option>
+			</field>
+			<field name="clusterAware" type="clusteraware" label="COM_TJFIELDS_FORM_LBL_FIELD_RELATED_CLUSTER_AWARE" default="0" class="btn-group" description="COM_TJFIELDS_FORM_DESC_FIELD_RELATED_CLUSTER_AWARE">
+				<option value="1">COM_TJFIELDS_YES</option>
+				<option value="0">COM_TJFIELDS_NO</option>
+			</field>
+			<field name="fieldName" label="COM_TJFIELDS_FORM_LBL_FIELD_RELATED_SELECT_UCM_TYPE" description="COM_TJFIELDS_FORM_DESC_FIELD_RELATED_SELECT_UCM_TYPE" type="subform" formsource="administrator/components/com_tjfields/models/forms/types/forms/relatedfields.xml" multiple="true" min="1" />
+		</fieldset>
+	</fields>
+</form>

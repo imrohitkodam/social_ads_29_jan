@@ -1,0 +1,116 @@
+.modsa #undo {
+display:block;
+}
+
+.ad-price-lable {
+font-weight:normal;
+padding-left:0;
+padding-right:5px;
+}
+
+.ad_ignore_button {
+cursor:pointer;
+float:right;
+}
+
+.ad_ignore_button_span {
+margin:0;
+position:absolute;
+right:5px;
+top:5px;
+width:auto!important;
+}
+
+.ad_prev_anchor {
+font-weight:bold;
+}
+
+.ad_prev_anchor:active {
+padding:0;
+text-decoration:none;
+}
+
+.ad_prev_first {
+font-size:13px;
+font-weight:bold;
+padding-left:5px;
+}
+
+.ad_prev_img {
+padding-left:5px;
+}
+
+.ad_prev_main {
+margin:5px;
+position:relative;
+width: calc(100% - 10px); /*  margin on both side 5px */
+display: inline-block;
+word-wrap: break-word!important;
+word-break: break-word!important;
+}
+
+.ad_prev_main:hover .ad_ignore_button_span {
+display:block!important;
+}
+
+.ad_prev_third {
+font-size:13px;
+padding-left:5px;
+}
+
+.rotate_with_animation .rotateAds {
+  animation: rotate 2s;
+  /* animation: rotate 2s ease; */
+}
+@keyframes rotate {
+  100% {
+      transform: rotateY(360deg);
+      /* transform: scaleX(0.5); */
+  }
+}
+
+/* @keyframes cf3FadeInOut {
+  0% {
+    opacity:1;
+  }
+  45% {
+  opacity:1;
+  }
+  55% {
+  opacity:0;
+  }
+  100% {
+  opacity:0;
+  }
+}
+
+.ad_rotate_with_transition .rotateAds {
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.ad_rotate_with_transition .rotateAds {
+animation-name: cf3FadeInOut;
+animation-timing-function: ease-in-out;
+animation-iteration-count: infinite;
+animation-duration: 5s;
+animation-direction: alternate;
+} */
+
+.ad_rotate_with_transition {
+  position: relative;
+}
+
+.ad_rotate_with_transition .ad_prev_main {
+  position:absolute;
+  -webkit-transition: opacity 1s ease-in-out;
+  -moz-transition: opacity 1s ease-in-out;
+  -o-transition: opacity 1s ease-in-out;
+  transition: opacity 1s ease-in-out;
+}
+
+.ad_rotate_with_transition .ad_prev_main.transparent {
+  opacity:0;
+}

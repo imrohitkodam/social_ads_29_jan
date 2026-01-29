@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+	<name>com_sa</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>17th Mar 2025</creationDate>
+	<version>5.0.2</version>
+	<description>SocialAds Dummy</description>
+	<install>
+		<sql>
+		</sql>
+	</install>
+	<uninstall>
+		<sql>
+		</sql>
+	</uninstall>
+	<files folder="site">
+		<folder>controllers</folder>
+		<folder>models</folder>
+		<folder>views</folder>
+		<filename>controller.php</filename>
+		<filename>index.html</filename>
+		<filename>router.php</filename>
+		<filename>sa.php</filename>
+	</files>
+	<administration>
+		<files folder="administrator">
+			<folder>controllers</folder>
+			<folder>models</folder>
+			<folder>tables</folder>
+			<filename>controller.php</filename>
+			<filename>index.html</filename>
+			<filename>sa.php</filename>
+		</files>
+	</administration>
+</extension>

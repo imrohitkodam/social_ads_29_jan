@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<field name="client" type="sql" query="SELECT unique_identifier, title FROM #__tj_ucm_types where state=1" key_field="unique_identifier" value_field="title" label="COM_TJFIELDS_RELATED_UCM_TYPE" description="COM_TJFIELDS_RELATED_SELECT_UCM_TYPE" required="true" onchange="relatedField.populateFields(this);">
+		<option value="">COM_TJFIELDS_RELATED_SELECT_UCM_TYPE_OPTION</option>
+	</field>
+	<field name="fieldIds" type="relatedfields" label="COM_TJFIELDS_RELATED_FIELDS" description="COM_TJFIELDS_RELATED_SELECT_FIELDS" multiple="true" required="true"/>
+</form>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params" label="COM_TJFIELDS_FIELD_BASIC_LABEL">
+		<fieldset name="params">
+			<field name="clusterAware" type="clusteraware" label="COM_TJFIELDS_FORM_LBL_FIELD_RELATED_CLUSTER_AWARE" default="0" class="btn-group" description="COM_TJFIELDS_FORM_DESC_FIELD_RELATED_CLUSTER_AWARE">
+				<option value="1">COM_TJFIELDS_YES</option>
+				<option value="0">COM_TJFIELDS_NO</option>
+			</field>
+			<field name="ucmItemOwner" type="radio" label="COM_TJFIELDS_FORM_LBL_FIELD_OWNERSHIP_MAKE_USER_ITEM_OWNER" default="0" class="btn-group" description="COM_TJFIELDS_FORM_DESC_FIELD_OWNERSHIP_MAKE_USER_ITEM_OWNER">
+				<option value="1">COM_TJFIELDS_YES</option>
+				<option value="0">COM_TJFIELDS_NO</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

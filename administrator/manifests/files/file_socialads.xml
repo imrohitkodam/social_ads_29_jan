@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.9" type="file" method="upgrade">
+    <name>File SocialAds</name>
+    <author>Techjoomla</author>
+    <authorEmail>extensions@techjoomla.com</authorEmail>
+    <authorUrl>https://techjoomla.com</authorUrl>
+    <copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>5.0.2</version>
+    <creationDate>17th Mar 2025</creationDate>
+    <description>Social Ads CLI scripts.</description>
+
+    <fileset>
+        <files target="cli">
+            <file>archivestats.php</file>
+            <file>statsemail.php</file>
+        </files>
+    </fileset>
+</extension>

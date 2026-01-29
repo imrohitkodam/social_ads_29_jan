@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params" label="COM_TJFIELDS_FIELD_BASIC_LABEL">
+		<fieldset name="params">
+			<field name="height" type="text" label="COM_TJFIELDS_FORM_LBL_IMAGE_HEIGHT" description="COM_TJFIELDS_FORM_DESC_AUDIO_FIELD_HEIGHT" required="true" default="40"/>
+			<field name="width" type="text" label="COM_TJFIELDS_FORM_LBL_FIELD_WIDTH" description="COM_TJFIELDS_FORM_DESC_AUDIO_FIELD_WIDTH" required="true" default="300"/>
+			<field name="autoplay" type="radio" default="0" label="COM_TJFIELDS_FORM_LBL_FIELD_AUTOPLAY_VIDEO_LINK" description="COM_TJFIELDS_FORM_DESC_FIELD_AUTOPLAY_VIDEO_LINK" class="btn-group">
+				<option value="1">COM_TJFIELDS_YES</option>
+				<option value="0">COM_TJFIELDS_NO</option>
+			</field>
+			<field name="muted" type="radio" default="0" label="COM_TJFIELDS_FORM_LBL_FIELD_MUTED_AUDIO" description="COM_TJFIELDS_FORM_DESC_FIELD__MUTED_AUDIO" class="btn-group">
+				<option value="1">COM_TJFIELDS_YES</option>
+				<option value="0">COM_TJFIELDS_NO</option>
+			</field>
+			<field name="validate" type="hidden" default="url"/>
+			<field name="filter" type="hidden" default="url"/>
+		</fieldset>
+	</fields>
+</form>

@@ -1,0 +1,1 @@
+ALTER TABLE `#__ad_data` add column `display_ad_on` VARCHAR(100) NOT NULL DEFAULT '' COMMENT 'This field specify display the ad on the device' AFTER `ad_image`;

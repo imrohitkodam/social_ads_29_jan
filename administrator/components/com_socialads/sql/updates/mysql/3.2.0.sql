@@ -1,0 +1,10 @@
+ALTER TABLE `#__ad_archive_stats` ENGINE = InnoDB;
+ALTER TABLE `#__ad_campaign` ENGINE = InnoDB;
+ALTER TABLE `#__ad_wallet_transc` ENGINE = InnoDB;
+ALTER TABLE `#__ad_coupon` ENGINE = InnoDB;
+ALTER TABLE `#__ad_ignore` ENGINE = InnoDB;
+ALTER TABLE `#__ad_orders` ENGINE = InnoDB;
+ALTER TABLE `#__ad_payment_info` ENGINE = InnoDB;
+ALTER TABLE `#__ad_stats` ENGINE = InnoDB;
+ALTER TABLE `#__ad_users` ENGINE = InnoDB;
+ALTER TABLE `#__ad_zone` ENGINE = InnoDB;

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params" label="COM_TJFIELDS_FIELD_BASIC_LABEL">
+		<fieldset name="params">
+			<field name="uploadpath" type="fileuploadpath" label="COM_TJFIELDS_FORM_LBL_FILE_UPLOAD_PATH" description="COM_TJFIELDS_FORM_DESC_FILE_UPLOAD_PATH" required="true" rows="5"/>
+			<field name="height" type="number" label="COM_TJFIELDS_FORM_LBL_IMAGE_HEIGHT" description="COM_TJFIELDS_FORM_DESC_IMAGE_FIELD_HEIGHT" required="true" default="240"/>
+			<field name="width" type="number" label="COM_TJFIELDS_FORM_LBL_FIELD_WIDTH" description="COM_TJFIELDS_FORM_DESC_IMAGE_FIELD_WIDTH" required="true" default="320"/>
+			<field name="renderer" type="radio" default="download" label="COM_TJFIELDS_FORM_LBL_FIELD_RENDERER" description="COM_TJFIELDS_FORM_DESC_FIELD_RENDERER">
+				<option value="download">COM_TJFIELDS_FORM_LBL_FIELD_RENDERER_DOWNLOAD</option>
+				<option value="preview">COM_TJFIELDS_FORM_LBL_FIELD_RENDERER_PREVIEW</option>
+			</field>
+		</fieldset>
+	</fields>
+</form>

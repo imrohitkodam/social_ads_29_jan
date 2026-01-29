@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" method="upgrade" version="2.5">
+	<name>LIB_TJMOBILEDETECT</name>
+	<libraryname>tjmobiledetect</libraryname>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (c) 2022 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>26th May 2022</creationDate>
+	<version>1.0.0</version>
+	<description>LIB_TJMOBILEDETECT_XML_DESCRIPTION</description>
+	<files>
+		<folder>lib_tjmobiledetect</folder>
+		<file>lib_tjmobiledetect.php</file>
+		<file>lib_tjmobiledetect.xml</file>
+	</files>
+
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.lib_tjmobiledetect.ini</language>
+		<language tag="en-GB">en-GB/en-GB.lib_tjmobiledetect.sys.ini</language>
+	</languages>
+</extension>

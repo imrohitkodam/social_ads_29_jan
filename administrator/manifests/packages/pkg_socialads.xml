@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.0" method="upgrade">
+	<name>SocialAds Package</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>17th Mar 2025</creationDate>
+	<version>5.0.2</version>
+	<packagename>socialads</packagename>
+	<packager>Techjoomla</packager>
+	<packagerurl>https://techjoomla.com</packagerurl>
+	<blockChildUninstall>true</blockChildUninstall>
+	<scriptfile>script.pkg_socialads.php</scriptfile>
+	<description>SocialAds - A Powerful Advertisement Solution to help you Monetise your Joomla, CB or JomSocial website.</description>
+
+	<files>
+		<!-- Components -->
+		<file type="component" id="com_socialads">components/com_socialads.zip</file>
+		<file type="component" id="com_sa">components/com_sa.zip</file>
+
+		<!-- Modules -->
+		<file type="module" id="mod_socialads" client="site">modules/site/mod_socialads.zip</file>
+
+		<!-- Plugins -->
+		<file type="plugin" id="socialads" group="actionlog">plugins/actionlog/plg_actionlog_socialads.zip</file>
+		<file type="plugin" id="adstax" group="adstax">plugins/adstax/adstax.zip</file>
+		<file type="plugin" id="jlikesocialads" group="content">plugins/content/plg_jlikesocialads.zip</file>
+		<file type="plugin" id="jma_socialads" group="emailalerts">plugins/emailalerts/plg_jma_socialads.zip</file>
+		<file type="plugin" id="socialads" group="privacy">plugins/privacy/socialads.zip</file>
+		<file type="plugin" id="esprofiletargeting" group="socialadstargeting">plugins/socialadstargeting/plg_esprofiletargeting.zip</file>
+		<file type="plugin" id="grouptargeting" group="socialadstargeting">plugins/socialadstargeting/plg_grouptargeting.zip</file>
+		<file type="plugin" id="jsprofiletargeting" group="socialadstargeting">plugins/socialadstargeting/plg_jsprofiletargeting.zip</file>
+		<file type="plugin" id="xiprofiletargeting" group="socialadstargeting">plugins/socialadstargeting/plg_xiprofiletargeting.zip</file>
+		<file type="plugin" id="layout1" group="socialadslayout">plugins/socialadslayout/plg_layout1.zip</file>
+		<file type="plugin" id="layout2" group="socialadslayout">plugins/socialadslayout/plg_layout2.zip</file>
+		<file type="plugin" id="layout3" group="socialadslayout">plugins/socialadslayout/plg_layout3.zip</file>
+		<file type="plugin" id="layout4" group="socialadslayout">plugins/socialadslayout/plg_layout4.zip</file>
+		<file type="plugin" id="layout5" group="socialadslayout">plugins/socialadslayout/plg_layout5.zip</file>
+		<file type="plugin" id="layout6" group="socialadslayout">plugins/socialadslayout/plg_layout6.zip</file>
+		<file type="plugin" id="layout7" group="socialadslayout">plugins/socialadslayout/plg_layout7.zip</file>
+		<file type="plugin" id="cbprofile" group="socialadspromote">plugins/socialadspromote/plg_cbprofile.zip</file>
+		<file type="plugin" id="esevent" group="socialadspromote">plugins/socialadspromote/plg_esevent.zip</file>
+		<file type="plugin" id="esprofile" group="socialadspromote">plugins/socialadspromote/plg_esprofile.zip</file>
+		<file type="plugin" id="jsevent" group="socialadspromote">plugins/socialadspromote/plg_jsevent.zip</file>
+		<file type="plugin" id="jsgroups" group="socialadspromote">plugins/socialadspromote/plg_jsgroups.zip</file>
+		<file type="plugin" id="jsprofile" group="socialadspromote">plugins/socialadspromote/plg_jsprofile.zip</file>
+		<file type="plugin" id="sobi" group="socialadspromote">plugins/socialadspromote/plg_sobi.zip</file>
+		<file type="plugin" id="tjmaxmind" group="system">plugins/system/plg_tjmaxmind.zip</file>
+		<file type="plugin" id="menuitem_meta_keyword_field" group="system">plugins/system/plg_menuitem_meta_keyword_field.zip</file>
+		<file type="plugin" id="archivestats" group="system">plugins/system/plg_archivestats.zip</file>
+		<file type="plugin" id="statsemail" group="system">plugins/system/plg_statsemail.zip</file>
+
+		<!-- Libraries -->
+		<file type="library" id="tjmaxmind">libraries/lib_tjmaxmind.zip</file>
+		<file type="library" id="tjmaxmind">libraries/lib_tjmobiledetect.zip</file>
+
+		<!-- Files -->
+		<file type="file" id="file_socialads">files/file_socialads.zip</file>
+	</files>
+
+	<updateservers>
+		<server type="extension" priority="1" name="SocialAds updates"><![CDATA[https://techjoomla.com/component/ars/updates/components/socialads?format=xml&dummy=extension.xml]]></server>
+	</updateservers>
+
+</extension>

@@ -1,0 +1,86 @@
+<?php
+/**
+ * @version    SVN: <svn_id>
+ * @package    Sa
+ * @author     Techjoomla <extensions@techjoomla.com>
+ * @copyright  Copyright (c) 2009-2015 TechJoomla. All rights reserved.
+ * @license    GNU General Public License version 2 or later.
+ */
+
+// No direct access
+defined('_JEXEC') or die('Restricted access');
+
+use Joomla\CMS\Language\Text;
+use Joomla\CMS\Factory;
+use Joomla\CMS\MVC\Controller\BaseController;
+
+// Define wrapper class
+define('SA_WRAPPER_CLASS', "sa-wrapper");
+
+// Access check.
+
+/*if (!JFactory::getUser()->authorise('core.manage', 'com_sa'))
+{
+	throw new Exception(Text::_('JERROR_ALERTNOAUTHOR'));
+}*/
+
+// Load defines.php
+require_once JPATH_SITE . '/components/com_socialads/defines.php';
+
+// Load common lang. file
+$lang = Factory::getLanguage();
+$lang->load('com_socialads', JPATH_ADMINISTRATOR, $lang->getTag(), true);
+$lang->load('com_socialads_common', JPATH_SITE, $lang->getTag(), true);
+
+// Load all required classes
+$saInitClassPath = JPATH_SITE . '/components/com_socialads/init.php';
+
+if (!class_exists('SaInit'))
+{
+	JLoader::register('SaInit', $saInitClassPath);
+	JLoader::load('SaInit');
+}
+
+// Define autoload function
+spl_autoload_register('SaInit::autoLoadHelpers');
+
+$helperPath = JPATH_SITE . '/components/com_socialads/helpers/payment.php';
+
+if (!class_exists('SocialadsPaymentHelper'))
+{
+	JLoader::register('SocialadsPaymentHelper', $helperPath);
+	JLoader::load('SocialadsPaymentHelper');
+}
+
+$helperPath = JPATH_SITE . '/components/com_socialads/helpers/wallet.php';
+
+if (!class_exists('SaWalletHelper'))
+{
+	JLoader::register('SaWalletHelper', $helperPath);
+	JLoader::load('SaWalletHelper');
+}
+
+// Import helper for declaring language constant
+$helperPath = JPATH_SITE . '/components/com_socialads/helpers/common.php';
+
+if (!class_exists('SaCommonHelper'))
+{
+	JLoader::register('SaCommonHelper', $helperPath);
+	JLoader::load('SaCommonHelper');
+}
+// Load common lang. file
+$lang = Factory::getLanguage();
+$lang->load('com_socialads_common', JPATH_SITE, $lang->getTag(), true);
+
+// Call helper function
+SaCommonHelper::getLanguageConstant();
+
+// Define autoload function
+spl_autoload_register('SaInit::autoLoadHelpers');
+
+// Include dependancies
+
+// Execute the task.
+$controller = BaseController::getInstance('Sa');
+$controller->execute(Factory::getApplication()->input->get('task'));
+$controller->redirect();

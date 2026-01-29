@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params" label="COM_TJFIELDS_FIELD_BASIC_LABEL">
+		<fieldset name="params">
+			<field name="default" type="text" label="COM_TJFIELDS_FORM_LBL_FIELD_DEFAULT" description="COM_TJFIELDS_FORM_DESC_FIELD_DEFAULT"/>
+			<field name="min" type="number" label="COM_TJFIELDS_FORM_LBL_FIELD_MIN" description="COM_TJFIELDS_FORM_DESC_FIELD_MIN"/>
+			<field name="max" type="number" label="COM_TJFIELDS_FORM_LBL_FIELD_MAX" description="COM_TJFIELDS_FORM_DESC_FIELD_MAX"/>
+			<field name="step" type="number" label="COM_TJFIELDS_FORM_LBL_FIELD_STEP" description="COM_TJFIELDS_FORM_DESC_FIELD_STEP"/>
+			<field name="hint" type="text" label="COM_TJFIELDS_FORM_LBL_NUMBER_FIELD_PLACEHOLDER" description="COM_TJFIELDS_FORM_DESC_NUMBER_FIELD_PLACEHOLDER"/>
+			<field name="filter" type="text" default="number"/>
+			<field name="compare" type="radio" default="0" class="btn-group" label="COM_TJFIELDS_FORM_LBL_NUMBER_FIELD_COMPARE" description="COM_TJFIELDS_FORM_DESC_NUMBER_FIELD_COMPARE">
+				<option value="0">JNO</option>
+				<option value="1">JYES</option>
+			</field>
+			<field name="validate" type="list" default="number" label="COM_TJFIELDS_FORM_LBL_FIELD_COMPARE_WITH_FIELD_LOGIC" description="COM_TJFIELDS_FORM_DESC_FIELD_COMPARE_WITH_FIELD_LOGIC" showon="compare:1">
+				<option value="">COM_TJFIELDS_FORM_DESC_FIELD_COMPARE_WITH_FIELD_LOGIC</option>
+				<option value="greaterthan">COM_TJFIELDS_FORM_FIELD_COMPARE_WITH_FIELD_LOGIC_GREATER</option>
+				<option value="greaterthanorequalto">COM_TJFIELDS_FORM_FIELD_COMPARE_WITH_FIELD_LOGIC_GREATER_THAN_OR_EQUAL</option>
+				<option value="lessthan">COM_TJFIELDS_FORM_FIELD_COMPARE_WITH_FIELD_LOGIC_LESS</option>
+				<option value="lessthanorequalto">COM_TJFIELDS_FORM_FIELD_COMPARE_WITH_FIELD_LOGIC_LESS_THAN_OR_EQUAL</option>
+			</field>
+			<field name="field" type="comparewithnumberfields" label="COM_TJFIELDS_FORM_LBL_FIELD_COMPARE_WITH_FIELD" description="COM_TJFIELDS_FORM_DESC_FIELD_COMPARE_WITH_FIELD" showon="compare:1"/>
+		</fieldset>
+	</fields>
+</form>
