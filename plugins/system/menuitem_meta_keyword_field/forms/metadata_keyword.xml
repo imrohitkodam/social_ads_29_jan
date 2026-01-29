@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fields name="params" >
+		<fieldset name="metakeyword">
+			<field
+					name="menu-meta_keywords"
+					type="textarea"
+					label="JFIELD_META_KEYWORDS_LABEL"
+					description="JFIELD_META_KEYWORDS_DESCRIPTION"
+					rows="3"
+					cols="40"
+				/>
+		</fieldset>
+	</fields>
+</form>

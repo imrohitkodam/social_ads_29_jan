@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.0" client ="site" method="upgrade">
+	<name>mod_socialads</name>
+	<creationDate>17th Mar 2025</creationDate>
+	<version>5.0.2</version>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>MOD_SOCIALADS_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_socialads">mod_socialads.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>tmpl</folder>
+		<folder>assets</folder>
+	</files>
+	<languages folder="languages">
+		<language tag="en-GB">en-GB/en-GB.mod_socialads.ini</language>
+		<language tag="en-GB">en-GB/en-GB.mod_socialads.sys.ini</language>
+		<language tag="fr-FR">fr-FR/fr-FR.mod_socialads.ini</language>
+		<language tag="it-IT">it-IT/it-IT.mod_socialads.ini</language>
+		<language tag="de-DE">de-DE/de-DE.mod_socialads.ini</language>
+		<language tag="es-ES">es-ES/es-ES.mod_socialads.ini</language>
+		<language tag="da-DK">da-DK/da-DK.mod_socialads.ini</language>
+		<language tag="nl-NL">nl-NL/nl-NL.mod_socialads.ini</language>
+		<language tag="th-TH">th-TH/th-TH.mod_socialads.ini</language>
+		<language tag="sv-SE">sv-SE/sv-SE.mod_socialads.ini</language>
+		<language tag="pt-PT">pt-PT/pt-PT.mod_socialads.ini</language>
+	</languages>
+
+	<config name="params">
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="moduleclass_sfx" type="text" default="" label="MOD_SUFIX" description="MOD_SUFIX_DES" />
+				<field name="zone" type="sql" default="1" label="SEL_ZONE" query="SELECT id , zone_name FROM #__ad_zone WHERE 	state=1"
+						key_field="id" value_field="zone_name" description="SEL_ZONE_DES"/>
+				<field name="popup_ad" type="radio" class="btn-group" default="0" showon="floater_ad:0" label="AD_POPUP" description="AD_POPUP_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+				<field name="popup_on_every_reload" type="radio" class="btn-group" showon="popup_ad:1" default="0" label="AD_POPUP_ON_EVERY_RELOAD" description="AD_POPUP_ON_EVERY_RELOAD_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+
+				<field name="full_screen_ad" type="radio" class="btn-group" showon="popup_ad:1" default="0" label="AD_FULL_SCREEN" description="AD_FULL_SCREEN_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+
+				<field name="floater_ad" type="radio" class="btn-group" showon="popup_ad:0" default="0" label="AD_FLOATER" description="AD_FLOATER_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+				<field name="floater_ads_top" type="text" class="validate-numeric" showon="floater_ad:1" default="500" label="AD_FLOATER_TOP" description="AD_FLOATER_TOP_DES" />
+				<field name="floater_ads_left" type="text" class="validate-numeric" showon="floater_ad:1" default="1000" label="AD_FLOATER_LEFT" description="AD_FLOATER_LEFT_DES" />
+
+				<field name="ad_rotation" type="radio" class="btn-group" showon="popup_ad:0[AND]floater_ad:0" default="0" label="AD_ROTATION" description="AD_ROTATION_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+				<field name="ad_rotation_delay" type="text" class= "validate-numeric" showon="ad_rotation:1" default="10" label="AD_ROTATION_DELAY" description="AD_ROTATION_DELAY_DESC" />
+				<field name="ad_rotate_with_animation" type="radio" showon="ad_rotation:1[AND]ad_rotate_with_transition:0" class="btn-group" default="0" label="AD_ROTATION_WITH_ANIMATION" description="AD_ROTATION_WITH_ANIMATION_DESC">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+				<field name="ad_rotate_with_transition" type="radio" showon="ad_rotation:1[AND]ad_rotate_with_animation:0" class="btn-group" default="0" label="AD_ROTATION_WITH_TRANSITION" description="AD_ROTATION_WITH_TRANSITION_DESC">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+				<field name="no_rand" type="radio" class="btn-group" default="1" label="RAN_DIS" description="RAN_DIS_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+				<field name="alt_ad" type="radio" class="btn-group" default="1" label="ALT_ADS"	description="ALT_ADS_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+				<field name="num_ads" type="text" class="validate-numeric" showon="floater_ad:0[AND]popup_ad:0" default="2" label="NUM_ADS" description="NUM_ADS_DES" />
+
+				<field name="debug" type="radio" class="btn-group" default="0" label="DEBUG" description="DEBUG_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+				<field name="create" type="radio" class="btn-group" default="1" label="ADLINK" description="ADLINK_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+				<field name="create_text" type="text" default="Create an Ad" showon="create:1[OR]create_guest:1" label="TEXT_ADLINK" description="TEXT_ADLINK_DES" />
+				<field name="create_guest" type="radio" class="btn-group" default="0" label="ADLINKGUEST" description="ADLINKGUEST_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+				<field name="create_page" type="radio" default="0" showon="create:1[OR]create_guest:1" label="ADLINK_WIN" description="ADLINK_WIN_DES">
+						<option value="0">SA_SAMWIN</option>
+						<option value="1">SA_NEWWIN</option>
+				</field>
+				<field name="adlink_secure" type="radio" class="btn-group" showon="create:1[OR]create_guest:1" default="0" label="ADLINKSECURE" description="ADLINKSECURE_DES">
+						<option value="0">SA_NO</option>
+						<option value="1">SA_YES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

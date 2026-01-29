@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5.0" type="plugin" group="system" method="upgrade">
+	<name>PLG_TJMAXMIND_TJMAXMIND</name>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (c) 2018-2019 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<creationDate>10th Dec 2019</creationDate>
+	<version>1.0.0</version>
+	<description>PLG_TJMAXMIND_TJMAXMIND_XML_DESCRIPTION</description>
+    <files>
+		<filename plugin="tjmaxmind">tjmaxmind.php</filename>
+        <folder>db</folder>
+	</files>
+    <languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_tjmaxmind.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_tjmaxmind.sys.ini</language>
+	</languages>
+</extension>

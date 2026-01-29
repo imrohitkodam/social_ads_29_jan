@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="socialadslayout" method="upgrade">
+	<name>Social Ads - Layout 5</name>
+	<creationDate>17th Mar 2025</creationDate>
+	<version>5.0.2</version>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>plugin for the layouts</description>
+	<files>
+		<filename plugin="layout5">layout5.php</filename>
+		<folder>layout5</folder>
+	</files>
+
+	<!-- parameters for Joomla 3.0.x -->
+	<params>
+		<param name="layout_type" type="list" layout="joomla.form.field.list-fancy-select" default="Media" label="Select Type Of Layout" description="Which type of layout configured in this plugin." >
+			<option value="Text and Media">Text and Media</option>
+			<option value="Text">Text</option>
+			<option value="Media">Media</option>
+			<option value="HTML5 Zip">HTML5 Zip</option>
+		</param>
+	</params>
+
+	<!-- Fields for Joomla 1.6.x and onwards -->
+	<config name="params">
+			<fields name="params">
+				<fieldset name="basic">
+					<field name="layout_type" type="list" layout="joomla.form.field.list-fancy-select" default="Media" label="Select Type Of Layout" description="Which type of layout configured in this plugin." >
+						<option value="Text and Media">Text and Media</option>
+						<option value="Text">Text</option>
+						<option value="Media">Media</option>
+						<option value="HTML5 Zip">HTML5 Zip</option>
+					</field>
+				</fieldset>
+			</fields>
+	</config>
+</extension>

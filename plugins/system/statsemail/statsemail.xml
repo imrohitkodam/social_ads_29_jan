@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="system" method="upgrade">
+	<name>Social Ads - Stats Email</name>
+	<creationDate>17th Mar 2025</creationDate>
+	<version>5.0.2</version>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>Plugin for the Stats Email</description>
+	<namespace path="src">Joomla\Plugin\System\StatsMail</namespace>
+	<files>
+		<filename plugin="statsemail">statsemail.php</filename>
+		<folder>services</folder>
+		<folder>src</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB/en-GB.plg_system_statsemail.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_statsemail.sys.ini</language>
+	</languages>
+
+	<config>
+	</config>
+</extension>

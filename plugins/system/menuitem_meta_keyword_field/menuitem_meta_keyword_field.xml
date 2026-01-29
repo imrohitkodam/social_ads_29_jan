@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.9" type="plugin" group="system" method="upgrade">
+	<name>plg_system_menuitem_meta_keyword</name>
+	<author>Techjoomla</author>
+	<creationDate>17th Mar 2025</creationDate>
+	<copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>5.0.2</version>
+	<description>PLG_SYSTEM_MENUITEM_META_KEYWORD_DESCRIPTION</description>
+	<files>
+		<filename plugin="menuitem_meta_keyword_field">menuitem_meta_keyword_field.php</filename>
+		<folder>forms</folder>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_system_menuitem_meta_keyword.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_system_menuitem_meta_keyword.sys.ini</language>
+	</languages>
+</extension>

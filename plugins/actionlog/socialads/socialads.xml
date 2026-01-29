@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension version="3.9" type="plugin" group="actionlog" method="upgrade">
+	<name>plg_actionlog_socialads</name>
+	<author>Techjoomla</author>
+	<creationDate>17th Mar 2025</creationDate>
+	<copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<version>5.0.2</version>
+	<description>PLG_ACTIONLOG_SOCIALADS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="socialads">socialads.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_actionlog_socialads.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_actionlog_socialads.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<!--Ad actions-->
+				<field name="logActionForCreateAd" type="radio" label="PLG_ACTIONLOG_SOCIALADS_CREATE_AD_LOG_ACTION_LBL" description="PLG_ACTIONLOG_SOCIALADS_COMMON_LOG_ACTION_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForDeleteAd" type="radio" label="PLG_ACTIONLOG_SOCIALADS_DELETE_AD_LOG_ACTION_LBL" description="PLG_ACTIONLOG_SOCIALADS_COMMON_LOG_ACTION_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForChangeStateAd" type="radio" label="PLG_ACTIONLOG_SOCIALADS_STATE_CHANGE_AD_LOG_ACTION_LBL" description="PLG_ACTIONLOG_SOCIALADS_COMMON_LOG_ACTION_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForUserIgnoreAd" type="radio" label="PLG_ACTIONLOG_SOCIALADS_ON_AFTER_IGNORE_LOG_ACTION_LBL" description="PLG_ACTIONLOG_SOCIALADS_ON_AFTER_IGNORE_LOG_ACTION_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<!--Coupon actions-->
+				<field name="logActionForCreateCoupon" type="radio" label="PLG_ACTIONLOG_SOCIALADS_CREATE_COUPON_LOG_ACTION_LBL" description="PLG_ACTIONLOG_SOCIALADS_COMMON_LOG_ACTION_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForDeleteCoupon" type="radio" label="PLG_ACTIONLOG_SOCIALADS_DELETE_COUPON_LOG_ACTION_LBL" description="PLG_ACTIONLOG_SOCIALADS_COMMON_LOG_ACTION_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForChangeStateCoupon" type="radio" label="PLG_ACTIONLOG_SOCIALADS_STATE_CHANGE_COUPON_LOG_ACTION_LBL" description="PLG_ACTIONLOG_SOCIALADS_COMMON_LOG_ACTION_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<!--Campaign actions-->
+				<field name="logActionForCreateCampaign" type="radio" label="PLG_ACTIONLOG_SOCIALADS_CREATE_CAMPAIGN_LOG_ACTION_LBL" description="PLG_ACTIONLOG_SOCIALADS_COMMON_LOG_ACTION_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForDeleteCampaign" type="radio" label="PLG_ACTIONLOG_SOCIALADS_DELETE_CAMPAIGN_LOG_ACTION_LBL" description="PLG_ACTIONLOG_SOCIALADS_COMMON_LOG_ACTION_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForChangeStateCampaign" type="radio" label="PLG_ACTIONLOG_SOCIALADS_STATE_CHANGE_CAMPAIGN_LOG_ACTION_LBL" description="PLG_ACTIONLOG_SOCIALADS_COMMON_LOG_ACTION_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<!--Zone actions-->
+				<field name="logActionForCreateZone" type="radio" label="PLG_ACTIONLOG_SOCIALADS_CREATE_ZONE_LOG_ACTION_LBL" description="PLG_ACTIONLOG_SOCIALADS_COMMON_LOG_ACTION_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForDeleteZone" type="radio" label="PLG_ACTIONLOG_SOCIALADS_DELETE_ZONE_LOG_ACTION_LBL" description="PLG_ACTIONLOG_SOCIALADS_COMMON_LOG_ACTION_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field name="logActionForChangeStateZone" type="radio" label="PLG_ACTIONLOG_SOCIALADS_STATE_CHANGE_ZONE_LOG_ACTION_LBL" description="PLG_ACTIONLOG_SOCIALADS_COMMON_LOG_ACTION_DESC" default="0" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+				<!-- Order Action-->
+				<field name="logActionForOrder" type="radio" label="PLG_ACTIONLOG_SOCIALADS_ORDER_LOG_ACTION_LBL" description="PLG_ACTIONLOG_SOCIALADS_COMMON_LOG_ACTION_DESC" default="1" class="btn-group btn-group-yesno">
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+
+			</fieldset>
+		</fields>
+	</config>
+</extension>

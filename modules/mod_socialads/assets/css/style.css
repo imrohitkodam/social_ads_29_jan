@@ -1,0 +1,72 @@
+/*added for sa_jbolo integration*/
+div.jbolo_sa_intgr_Chat span.mf_chaton {background:url(../images/green.gif) no-repeat 3px 7px;display:block;margin:0; padding:3px 0 0 15px ;}
+div.jbolo_sa_intgr_Chat span.mf_chaton a{text-decoration:none;}
+div.jbolo_sa_intgr_Chat span.mf_chatoff {background:url(../images/offline.jpg) no-repeat 3px 7px;display:block;margin:0; padding:3px 0 0 15px ;}
+div.jbolo_sa_intgr_Chat span.mf_chatoff a{text-decoration:none;}
+div.jbolo_sa_intgr_Chat{display: block;padding-left: 3px;}
+/*end added for sa_jbolo integration*/
+div.social_share_container{width:180px;}
+div.social_share_container_inner{padding:5px;}
+.modsa {clear:both;}
+.affiliate_div_style
+{
+	width:100% !important;
+}
+
+.floater-ads-btn-close {
+    box-sizing: content-box;
+    height: 1em;
+    color: black;
+    border: 0;
+    border-radius: 0.25rem;
+    opacity: 0.5;
+	float: right;
+	padding: 0.5rem 0.5rem;
+    margin: -0.5rem -0.5rem -0.5rem auto;
+}
+
+.floater-ads-mt-4 {
+	margin-top: 1.5rem !important;
+}
+
+.floater-ads-d-none {
+    display: none !important;
+}
+
+.bs5-modal-fullscreen {
+    width: 100vw;
+    max-width: none;
+    height: 100%;
+    margin: 0;
+}
+
+.float-ads {
+    position: fixed;
+    z-index: 500;
+    background-color: rgb(255, 255, 255);
+    border: 0px solid rgb(0, 0, 0);
+    visibility: visible;
+}
+
+.social-ads-d-content {
+    display: contents !important;
+}
+
+.bs3-modal-fullscreen .modal-dialog {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.bs3-modal-fullscreen .modal-content {
+    height: auto !important;
+    min-height: 100% !important;
+    border: 0 none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.bs3-modal-fullscreen {
+    padding: 0 !important;
+}

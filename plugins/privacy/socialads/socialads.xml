@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4" type="plugin" group="privacy" method="upgrade">
+	<name>plg_privacy_socialads</name>
+	<version>5.0.2</version>
+	<creationDate>17th Mar 2025</creationDate>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>https://techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2009 - 2025 Techjoomla. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<description>PLG_PRIVACY_SOCIALADS_XML_DESCRIPTION</description>
+	<files>
+		<filename plugin="socialads">socialads.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages folder="language">
+		<language tag="en-GB">en-GB/en-GB.plg_privacy_socialads.ini</language>
+		<language tag="en-GB">en-GB/en-GB.plg_privacy_socialads.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" />
+		</fields>
+	</config>
+</extension>
